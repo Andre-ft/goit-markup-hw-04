@@ -20,6 +20,7 @@
   --title-text-color: #212121;
   --primary-bacgr-color: #2f303a;
   --second-backgr-color: #f5f4fa;
+  --hero-bg-color: #c4c4c4;
 }
 
 html {
@@ -90,7 +91,7 @@ img {
   display: block;
 }
 
-/* header */
+/* ========== header ========== */
 
 .page-header {
   border-bottom: 1px solid #ececec;
@@ -137,7 +138,7 @@ nav {
   vertical-align: middle;
 }
 
-/* site auth navigation */
+/* ========== site auth navigation ========== */
 
 .auth-nav,
 .site-nav {
@@ -188,13 +189,26 @@ nav {
   color: var(--accent-color);
 }
 
-/* hero section */
+/* ========== hero section ========== */
 
 .hero {
-  background-color: var(--primary-bacgr-color);
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
   padding-bottom: 200px;
   padding-top: 200px;
   text-align: center;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url('../images/background-hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--hero-bg-color);
 }
 
 .hero-title {
@@ -205,6 +219,7 @@ nav {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #fff;
+
   margin-top: 0;
   margin-bottom: 30px;
 }
@@ -233,11 +248,7 @@ nav {
   background-color: #fff;
 }
 
-/* section feature */
-
-.feature .section-title {
-  display: none;
-}
+/* ========== section feature ========== */
 
 .section-title {
   font-weight: 700;
@@ -263,6 +274,32 @@ nav {
   width: calc((100% - 90px) / 4);
 }
 
+.feature-list-item::before {
+  display: block;
+  content: '';
+  height: 120px;
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--second-backgr-color);
+}
+
+.antenna::before {
+  background-image: url(../images/antenna-1.png);
+}
+
+.clock::before {
+  background-image: url(../images/clock-2.png);
+}
+
+.diagram::before {
+  background-image: url(../images/diagram-3.png);
+}
+
+.astronaut::before {
+  background-image: url(../images/astronaut-4.png);
+}
+
 .feature-list-item + .feature-list-item {
   margin-left: 30px;
 }
@@ -273,6 +310,7 @@ nav {
   line-height: 1.143;
   text-transform: uppercase;
   margin-bottom: 10px;
+  padding-top: 30px;
 }
 
 .feature-list .list-text {
@@ -281,7 +319,7 @@ nav {
   margin: 0;
 }
 
-/* what-we-doing section */
+/* ========== what-we-doing section ========== */
 
 .what-we-doing .list {
   display: flex;
@@ -295,7 +333,7 @@ nav {
   width: calc((100% - 60px) / 3);
 }
 
-/* our team */
+/* ========== our team ========== */
 
 .our-team-list {
   display: flex;
@@ -327,21 +365,16 @@ nav {
 .our-team-list li {
   width: calc((100% - 90px) / 4);
   background-color: #fff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .our-team-list li + li {
   margin-left: 30px;
 }
 
-/* portfolio section */
-
-main > h1 {
-  display: none;
-}
-
-.portfolio-title {
-  display: none;
-}
+/* ========== portfolio section ========== */
 
 .portfolio-filter {
   display: flex;
@@ -387,7 +420,7 @@ main > h1 {
   margin: 0;
 }
 
-/* portfolio-filter Buttons */
+/* ========== portfolio-filter Buttons ========== */
 
 .portfolio-filter > li + li {
   margin-left: 8px;
@@ -418,7 +451,17 @@ main > h1 {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-/* footer */
+/* ========= Regular Customers ========= */
+
+.regular-customers-list {
+  display: flex;
+}
+
+.customer-item + .customer-item {
+  margin-left: 30px;
+}
+
+/* ========== footer ========== */
 
 footer {
   background-color: var(--primary-bacgr-color);
