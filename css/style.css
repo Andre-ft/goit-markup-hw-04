@@ -21,6 +21,7 @@
   --primary-bacgr-color: #2f303a;
   --second-backgr-color: #f5f4fa;
   --hero-bg-color: #c4c4c4;
+  --svg-color: #afb1b8;
 }
 
 html {
@@ -187,6 +188,20 @@ nav {
 .site-nav .link:focus,
 .site-nav .link.current {
   color: var(--accent-color);
+  fill: var(--accent-color);
+}
+
+.link-flex {
+  display: flex;
+  align-items: center;
+}
+
+.vert-align {
+  vertical-align: middle;
+}
+
+span.vert-align {
+  padding-left: 10px;
 }
 
 /* ========== hero section ========== */
@@ -359,19 +374,44 @@ nav {
 
 .our-team-list .content {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 0px;
+  margin-bottom: 16px;
 }
 
-.our-team-list li {
+.our-team-list > li {
   width: calc((100% - 90px) / 4);
   background-color: #fff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  padding-bottom: 30px;
 }
 
-.our-team-list li + li {
+.our-team-list > li + li {
   margin-left: 30px;
+}
+
+.social-links {
+  width: 206px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.social-links li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  fill: var(--svg-color);
+  border-radius: 50%;
+}
+
+.social-links li:hover {
+  background-color: var(--accent-color);
+  fill: #ffffff;
 }
 
 /* ========== portfolio section ========== */
@@ -457,6 +497,24 @@ nav {
   display: flex;
 }
 
+.customer-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 92px;
+  border-width: 1px;
+  border-color: var(--svg-color);
+  border-style: solid;
+  border-radius: 4px;
+  fill: var(--svg-color);
+}
+
+.customer-item:hover {
+  border-color: var(--accent-color);
+  fill: var(--accent-color);
+}
+
 .customer-item + .customer-item {
   margin-left: 30px;
 }
@@ -493,4 +551,35 @@ footer .logo {
 
 address li:first-child {
   margin: 0 0 9px 0;
+}
+
+footer > .container {
+  display: flex;
+}
+
+.join-block {
+  margin-left: 70px;
+  padding-top: 12px;
+}
+
+.join-block li {
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: #ffffff;
+}
+
+.join-block li:hover {
+  background-color: var(--accent-color);
+}
+
+.join-block .social-links {
+  margin-left: 0;
+}
+
+.join-block > .section-title {
+  text-align: left;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
 }
