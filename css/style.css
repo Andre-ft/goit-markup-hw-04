@@ -345,9 +345,51 @@ span.vert-align {
 }
 
 .what-we-doing-item {
+  position: relative;
   width: calc((100% - 60px) / 3);
 }
 
+.what-we-doing-item::after {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  /* content: 'десктопные приложения'; */
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  color: #ffffff;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.what-we-doing-item:nth-child(1)::after {
+  content: 'десктопные приложения';
+}
+
+.what-we-doing-item:nth-child(2)::after {
+  content: 'мобильные приложения';
+}
+
+.what-we-doing-item:nth-child(3)::after {
+  content: 'дизайнерские решения';
+}
+
+/* .what-we-doing .list:nth-child(1)::after {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  background-color: rgba(47, 48, 58, 0.8);
+  content: 'десктопные приложения';
+} */
 /* ========== our team ========== */
 
 .our-team-list {
