@@ -451,7 +451,8 @@ span.vert-align {
   border-radius: 50%;
 }
 
-.social-links li:hover {
+.social-links li:hover,
+.social-links li:focus {
   background-color: var(--accent-color);
   fill: #ffffff;
 }
@@ -557,7 +558,8 @@ span.vert-align {
   fill: var(--svg-color);
 }
 
-.customer-item:hover {
+.customer-item:hover,
+.customer-item:focus {
   border-color: var(--accent-color);
   fill: var(--accent-color);
 }
@@ -614,7 +616,8 @@ footer > .container {
   fill: #ffffff;
 }
 
-.join-block li:hover {
+.join-block li:hover,
+.join-block li:focus {
   background-color: var(--accent-color);
 }
 
